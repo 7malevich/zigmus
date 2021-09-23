@@ -1,0 +1,23 @@
+.breadcrumbs
+   display: flex
+   align-items: center
+   opacity: 0.4
+   margin-bottom: 64px
+   &__item
+      display: flex
+      padding-left: 20px
+      position: relative
+      &::before
+         content: ''
+         position: absolute
+         background-image: url('../images/dist/arrow-down-breadcrumbs.svg')
+         background-repeat: no-repeat
+         top: calc(50% - 4px)
+         left: 0
+         width: 9px
+         height: 9px
+         cursor: pointer
+   &__link
+      font-weight: 500
+      line-height: 16px
+      color: $textcolor

@@ -1,0 +1,93 @@
+.sidebar-main
+   background: $white
+   padding-top: 40px
+   //width: 100%
+   //display: flex
+   //flex-direction: column
+   //align-items: flex-end
+.sidebar
+   &__arrow
+      position: absolute
+      right: 20px
+      top: calc(50% - 5px)
+   &__img
+      margin-right: 10px
+   &__inner
+      width: 166px
+      margin-bottom: 15px
+   &__item
+      position: relative
+
+      border-bottom: 1px solid rgba($accent, .3)
+      &.active
+         & .sidebar__content
+            height: auto
+            transition: .5s ease-in-out
+         & .sidebar__title
+            transition: .5s ease-in-out
+
+            & .sidebar__arrow
+               transition: .5s ease-in-out
+               transform: rotate(180deg)
+         & .sidebar__item
+            margin-bottom: 10px
+
+   &__title
+      cursor: pointer
+      position: relative
+      display: flex
+      align-items: center
+      padding: 15px 20px 15px 0
+      &.sidebar__setting
+         padding: 0
+         margin-bottom: 10px
+         height: 26px
+      &__dec
+         width: 166px
+         height: 1px
+         background: $accent
+
+      &-main
+         margin-bottom: 25px
+      &-text
+         font-weight: bold
+         font-size: 14px
+         line-height: 16px
+      &-num
+         width: 12px
+         height: 12px
+         border-radius: 50%
+         background: $accent
+         font-weight: bold
+         font-size: 7px
+         line-height: 12px
+         color: $white-text
+         text-align: center
+         margin-left: 5px
+      &::before
+         content: ''
+         background: url('../images/dist/arrow-bottom-accent.svg')
+         background-repeat: no-repeat
+         position: absolute
+         top: 45%
+         transform: translateY(-50%)
+         right: 20px
+         font-size: 34px
+   &__content
+      position: relative
+      height: 0
+      overflow: hidden
+      transition: .5s ease-in-out
+      background-color: $white
+      padding-left: 28px
+      li
+         margin-bottom: 5px
+         display: flex
+         align-items: center
+         &:last-child
+            margin-bottom: 15px
+         a
+            opacity: 0.4
+            font-weight: 500
+            font-size: 12px
+            line-height: 18px

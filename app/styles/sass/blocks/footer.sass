@@ -1,0 +1,90 @@
+.footer
+   background: $textcolor
+   &-botton
+      border-top: 1px solid rgba($white, .1)
+      &__text
+         font-size: 10px
+         line-height: 13px
+         color: $white-text !important
+         opacity: 0.8
+      &__inner
+         display: flex
+         justify-content: space-between
+         align-items: center
+      &__agreement
+         display: flex
+         &-link
+            line-height: 22px
+            text-decoration-line: underline
+            color: $white-text
+            opacity: 0.8
+            margin-right: 30px
+            &:last-child
+               margin-right: 0
+   &-top
+      display: flex
+      justify-content: space-between
+      &__contact
+         display: flex
+         justify-content: space-between
+         &-text
+            font-size: 12px
+            line-height: 120%
+            color: $white-text
+            opacity: 0.4
+            margin-bottom: 3px
+         &-item
+            display: flex
+            flex-direction: column
+            &:first-child
+               margin-right: 45px
+         &-link
+            font-weight: bold
+            font-size: 18px
+            line-height: 26px
+            color: $white-text
+            margin-bottom: 20px
+      &__title
+         font-weight: 600
+         font-size: 24px
+         line-height: 20px
+         color: $white-text
+         margin-bottom: 30px
+      &__item
+         padding: 80px 53px 40px
+         border-right: 1px solid rgba($white, .1)
+         &:last-child
+            border-right: 0px solid transparent
+            padding-right: 0
+         &:first-child
+            padding-left: 0
+      &__menu
+         display: flex
+         &-item
+            display: flex
+            flex-direction: column
+            margin-right: 53px
+            &.footer-top__menu-item--link
+               li
+                  &:first-child
+                     margin-bottom: 0
+            &:last-child
+               margin-right: 0
+            li
+               &:first-child
+                  font-weight: 500
+                  font-size: 20px
+                  line-height: 26px
+                  color: $white-text
+                  margin-bottom: 10px
+               a
+                  font-size: 14px
+                  line-height: 26px
+                  color: $white-text
+                  opacity: 0.4
+.soc
+   display: flex
+   &__item
+      margin-right: 15px
+      &:last-child
+         margin-right: 0

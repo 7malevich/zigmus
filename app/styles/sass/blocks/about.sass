@@ -1,0 +1,259 @@
+.s-about
+   background: $blue
+   position: relative
+
+.about-content
+   padding: 40px 0 257px
+   margin: 0 10px 0 28px
+
+.card
+   width: 730px
+   padding: 30px
+   background: $white
+   box-shadow: 0px 10px 40px rgba(0, 4, 41, 0.05)
+   border-radius: 8px
+   &__tel-label
+      font-weight: 600
+      font-size: 14px
+      line-height: 120%
+      margin-right: 2px
+   &__tel-input
+      margin: 0
+      background: transparent
+      padding: 0
+      border: none
+      opacity: .5
+      &:placeholder
+         font-weight: 700
+   &__form-tel
+      display: flex
+   &__language
+      display: flex
+      align-items: center
+      padding-right: 10px !important
+      position: relative
+      &::before
+         content: ''
+         background-image: url('../images/dist/arrow-bottom-accent.svg') !important
+         width: 6px
+         height: 6px
+      &-img
+         width: 20px
+         height: 20px
+         border-radius: 50%
+         margin-right: 5px
+   &__title-box
+      padding: 15px 30px
+      background: $blue
+      border-radius: 0px 0px 10px 10px
+      margin: 30px -30px
+   &__box
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 20px
+      max-width: 570px
+      & .card__item
+         margin-bottom: 0
+      &--indent
+         margin-bottom: 53px
+      &--grid
+         max-width: 450px
+
+   &__item
+      background: $blue
+      border: 1px solid rgba(35, 110, 255, 0.15)
+      border-radius: 6px
+      padding: 11px 20px 9px
+      position: relative
+      display: flex
+      height: 59px
+      flex-direction: column
+      margin-bottom: 20px
+      max-width: 570px
+      &.card__item--no-arrow
+         &::before
+            content: ''
+            background-image: none
+      &.card__item--add
+         &::before
+            content: ''
+            background-image: none
+      &-section
+         display: grid
+         grid-template-columns: 43fr 9fr 32fr
+         padding: 0
+         margin-bottom: 15px
+      &-box
+         display: grid
+         border-right: 1px solid rgba($accent, .3)
+         padding: 11px 20px 9px
+         height: 100%
+         &:last-child
+            border-right: 0px solid transparent
+
+      &--add
+         display: flex
+         justify-content: center
+         padding-left: 10px
+         padding-right: 10px
+
+      &::before
+         content: ''
+         position: absolute
+         background-image: url('../images/dist/arrow-bottom-accent.svg')
+         background-repeat: no-repeat
+         top: calc(50% - 4px)
+         right: 25px
+         width: 9px
+         height: 9px
+         cursor: pointer
+   &__title
+      font-size: 12px
+      line-height: 12px
+      opacity: .5
+      margin-bottom: 3px
+   &__content
+      display: flex
+      align-items: center
+   &__text
+      margin-right: 3px
+   &__img-close
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: rgba($accent, .5)
+      cursor: pointer
+      position: relative
+      img
+         position: absolute
+         top: calc(50% - 2px)
+         left: calc(50% - 2px)
+   &__add
+      display: flex
+      align-items: center
+      cursor: pointer
+      &--indent
+         margin: 15px 0 20px
+      &-text
+         font-size: 12px
+         color: $accent
+         margin-left: 6px
+   &__text-gray
+      font-size: 12px
+      line-height: 18px
+      opacity: 0.4
+      display: flex
+      align-items: center
+   &__chekbox
+      display: flex
+
+.card__item + .card__add
+   margin-bottom: 30px
+
+.card
+   &__empty
+      display: flex
+      align-items: center
+      &-text
+         font-weight: 600
+         font-size: 14px
+         line-height: 24px
+         margin-bottom: 10px
+      &-label
+         display: flex
+         align-items: center
+         cursor: pointer
+         margin-right: 15px
+      &-style
+         width: 10px
+         height: 10px
+         opacity: 0.6
+         border: 1px solid $accent
+         border-radius: 2px
+         background: $white
+         margin-right: 8px
+         &-text
+            font-size: 12px
+            line-height: 18px
+      &-input
+         position: absolute
+         width: 1px
+         height: 1px
+         overflow: hidden
+         clip: rect(0 0 0 0)
+         &:checked
+            & + .card__empty-style
+               background: $accent
+               background-image: url(../img/src/.svg)
+               background-repeat: no-repeat
+               background-position: center
+@media only screen and (max-width : 1180px)
+   .container
+      padding: 0 15px
+   .sidebar-main,
+   .progress-bar,
+   .white,
+   .blue,
+   .header__menu.menu
+      display: none
+   .about-content,
+   .s-about,
+   .card,
+   .card__item,
+   .card__box
+      max-width: 100%
+      width: 100%
+   .about-content
+      margin: 0
+   .footer-top__item
+      padding: 50px 23px 40px !important
+@media only screen and (max-width : 1000px)
+
+   .footer-top
+      display: flex
+      flex-direction: column
+   .footer-top__item
+      padding: 25px 23px 20px!important
+      border-right: 1px solid transparent !important
+   .footer-top__contact
+      display: contents !important
+
+@media only screen and (max-width : 768px)
+   .footer-botton__agreement
+      display: flex
+      flex-direction: column
+   .header__user-item,
+   .header__search
+      display: none !important
+   .header__user-item.user-accaunt
+      display: flex !important
+      border-right: 0px
+@media only screen and (max-width : 620px)
+   .footer-botton__inner
+      display: flex
+      flex-direction: column
+      & > div
+         margin-bottom: 10px
+   .card__box
+      display: grid
+      grid-template-columns: 1fr
+   .section-title
+      font-size: 23px !important
+   .breadcrumbs
+      margin-bottom: 30px !important
+   .about-content
+      padding: 40px 0 70px
+   .footer-top__menu
+      display: flex
+      flex-direction: column
+   .card__item.card__item-section
+      display: none
+@media only screen and (max-width : 445px)
+   .card__text
+      font-size: 11px !important
+   .card
+      padding: 15px
+   .card__title-box
+      margin: 30px -15px
+   .card__item
+      padding: 11px 11px 9px
