@@ -1,0 +1,133 @@
+$accent: #236EFF
+$blue: #F5F9FF
+$black: #000
+$white: #fff
+$botticelli: #D8E5EE
+$blaze-orange: #FF600E
+
+$white-text: #ffffff
+$black-text: #000
+$rhino: #283754
+
+$fontsize: 14px
+$textcolor: #343434
+$lineheight: 24px
+$content-size: 1170px
+$userfont: gilroy-oh5, sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
+
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+//@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+//@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+   @font-face
+      font-family: $fname
+      font-style: $fstyle
+      font-weight: $fweight
+      src: url($furl) format('ttf')
+
+@include font('gilroy-oh5', normal, 400, '../fonts/gilroy/Gilroy-Regular.ttf')
+@include font('gilroy-oh5', normal, 500, '../fonts/gilroy/Gilroy-Medium.ttf')
+@include font('gilroy-oh5', normal, 600, '../fonts/gilroy/Gilroy-SemiBold.ttf')
+@include font('gilroy-oh5', normal, 700, '../fonts/gilroy/Gilroy-Bold.ttf')
+@include font('gilroy-oh5', normal, 800, '../fonts/gilroy/Gilroy-ExtraBold.ttf')
+
+::placeholder
+   color: #666
+
+::selection
+   background-color: $accent
+   color: #fff
+
+input, textarea
+   outline: none
+   &:focus:required:invalid
+      border-color: red
+   &:required:valid
+      border-color: green
+
+body
+   font-family: $userfont
+   font-size: $fontsize
+   font-weight: 500
+   line-height: $lineheight
+   color: $textcolor
+   background: $blue
+   margin: 0
+   min-width: 320px
+   position: relative
+   overflow-x: hidden
+
+.container
+   margin: 0 auto
+   max-width: $content-size
+   //padding: 0 15px
+   width: 100%
+
+h1, h2, h3, h4, h5, h6
+   margin: 0
+   font-size: inherit
+
+ul, li
+   list-style-type: none
+   margin: 0
+   padding: 0
+
+a
+   text-decoration: none
+   display: inline-block
+   cursor: pointer
+   color: $textcolor
+   transition: color .25s ease-out
+   &:hover
+      color: $accent
+      text-decoration: none
+
+p
+   margin: 0
+
+img,
+.img
+   max-width: 100%
+   height: auto
+   object-fit: cover
+
+*
+   -webkit-box-sizing: border-box
+   -moz-box-sizing: border-box
+   box-sizing: border-box
+   &:before, &:after
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+
+*::-webkit-input-placeholder
+   color: #666
+   opacity: 1
+
+*:-moz-placeholder
+   color: #666
+   opacity: 1
+
+*::-moz-placeholder
+   color: #666
+   opacity: 1
+
+*:-ms-input-placeholder
+   color: #666
+   opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+   color: #666
+body input:required:valid,
+body textarea:required:valid
+   color: #666
+
+html, body
+   height: 100%
